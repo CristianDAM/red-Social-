@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=autor\ url\ titulo
+comment0.target=estradaFoto(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ estradaFoto\r\n
+numComments=1

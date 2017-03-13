@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=autor\ texto
+comment0.target=entradaTexto(java.lang.String,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ entradaTexto\r\n
+comment1.params=
+comment1.target=void\ meGusta()
+comment2.params=text
+comment2.target=void\ addComentarios(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getMensaje()
+numComments=4

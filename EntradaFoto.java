@@ -8,49 +8,62 @@ import java.time.temporal.ChronoUnit;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class  EntradaTexto  extends Entrada
+public class EntradaFoto extends Entrada
 {
- 
-    private String mensaje;
-  
+   
+    private String tituloImagen;
+   
+    private String urlImagen;
+
     /**
      * Constructor for objects of class entradaTexto
      */
-    public EntradaTexto(String autor, String texto)
+    public EntradaFoto(String autor, String url, String titulo)
     {
-        super( autor);
-       
-        mensaje = texto;
-      
-
+       super(autor);
+        urlImagen = url;        
+        tituloImagen = titulo;    
     }
 
-    /**
+     /**
      * Metodo que devuelve por pantalla el mensaje 
      */
-    public String getMensaje()
+    public String getUrlImagen()
     {
-        return mensaje;
+        return urlImagen;
+
+    }
+    
+    /**
+     * Metodo que devuelve el titulo de la imagen 
+     */
+     public String getTituloImagen()
+    {
+        return tituloImagen;
 
     }
 
-  
+
+   
     public String toString()
     {
         String cadenaADevolver = "";
         cadenaADevolver += "Usuario: " +  getUsuario() + "\n";
-        cadenaADevolver += mensaje + "\n";
+        cadenaADevolver += tituloImagen + "\n";
+        cadenaADevolver += urlImagen + "\n";
         cadenaADevolver += getCantidadMeGusta() + "me gusta";
 
         long segundosQueHanPasadoDesdeLaCreacion = getMomentoPublicacion().until(LocalDateTime.now(), ChronoUnit.SECONDS);
         long minutosQueHanPasadoDesdeLaCreacion = segundosQueHanPasadoDesdeLaCreacion / 60;
         long segundosResiduales = segundosQueHanPasadoDesdeLaCreacion % 60;
+        
         cadenaADevolver += "Hace ";
         if(segundosQueHanPasadoDesdeLaCreacion > 0) 
         {
             cadenaADevolver += minutosQueHanPasadoDesdeLaCreacion + "minutos ";
         }
         cadenaADevolver += segundosResiduales + " segundos.\n";
+        
         if (getComentarios().isEmpty())
         {
             cadenaADevolver += "La entrada no tiene comentarios";
@@ -62,9 +75,15 @@ public class  EntradaTexto  extends Entrada
             }
 
             cadenaADevolver += getMomentoPublicacion().until(LocalDateTime.now(), ChronoUnit.SECONDS);
-
           
         }
           return cadenaADevolver;
     }
+    
+    public void mostrar()
+    {
+        System.out.println(this);
+        
+    }
+    
 }

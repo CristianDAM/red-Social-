@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 import java.time.LocalDateTime;
 /**
  * Write a description of class Entrada here.
@@ -11,7 +11,7 @@ public class Entrada
     private String usuario;
     private int cantidadMeGusta;
     private LocalDateTime momentoPublicacion;
-    private ArrayList<String> comentarios;
+ 
 
     /**
      * Constructor for objects of class Entrada
@@ -20,7 +20,7 @@ public class Entrada
     {
         usuario = autor;
         cantidadMeGusta = 0;
-        comentarios = new ArrayList<>();
+      
         momentoPublicacion = LocalDateTime.now();
 
     }
@@ -61,19 +61,9 @@ public class Entrada
 
     }
 
-    public ArrayList<String> getComentarios()
-    {
-        return comentarios;
-    }
+ 
 
-    /**
-     * Metodo que añade a la lista de comentarios un nuevo comentario que se añade pidiendolo por parametro 
-     */
-    public void addComentarios(String text)
-    {
-        comentarios.add(text);
-
-    }
+  
 
     public String toString()
     {

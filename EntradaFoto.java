@@ -8,7 +8,7 @@ import java.time.temporal.ChronoUnit;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class EntradaFoto extends Entrada
+public class EntradaFoto extends ClaseConComentario
 {
    
     private String tituloImagen;

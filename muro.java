@@ -7,44 +7,47 @@
  */
 public class muro
 {
-      private ArrayList<EntradaTexto> mensajes;
-        private ArrayList<EntradaFoto> fotos;
+      private ArrayList<Entrada> entradas;
+       
 
     /**
      * Constructor for objects of class muro
      */
     public muro()
     {
-        mensajes = new ArrayList<>();
-        fotos = new ArrayList<>();
+        entradas = new ArrayList<>();
+      
     }
     
-    public void addEntradaTexto(EntradaTexto entradaTexto)
+    /**
+     * Metodo que premite añadir una entrada de cualquier subclase nuestra ArrayList de entradas
+     */
+    public void addEntrada(Entrada entrada) 
     {
-        mensajes.add(entradaTexto);
-    
+        entradas.add(entrada);
+
     }
-    
-    public void addEntradaFoto(EntradaFoto entradaFoto)
-    {
-        fotos.add(entradaFoto);
-    }
-    
+       
     public String toString()
     {
         String cadenaADevolver = "";
-        for (EntradaTexto  entrada : mensajes)
-        {
+        for (Entrada entrada : entradas)
+        { 
             cadenaADevolver += entrada + "\n";
         }
-        
-        for(EntradaFoto entrada : fotos)
-        {
-            cadenaADevolver += entrada + "\n";
-        }
+     
         return cadenaADevolver;
     
     
+    }
+    
+      /**
+     * Metodo que imprime or pantalla nuestro objeto actual
+     */
+    public void mostrar()
+    {
+        System.out.println(this);
+        
     }
 
   

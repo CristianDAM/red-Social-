@@ -20,11 +20,13 @@ public class EntradaUnionAGrupo extends Entrada
         this.grupo = grupo;
 
     }
+    
+    
     public String toString()
     {
         String cadenaADevolver = "";
-        cadenaADevolver += "Usuario: " +  getUsuario() + "\n";
-        cadenaADevolver += "se a unido a "+ grupo+ "\n";
+        cadenaADevolver += "EL usuario: " +  getUsuario();   
+        cadenaADevolver += "se a unido a " + grupo + "\n";
         cadenaADevolver += getCantidadMeGusta() + "me gusta";
 
         long segundosQueHanPasadoDesdeLaCreacion = getMomentoPublicacion().until(LocalDateTime.now(), ChronoUnit.SECONDS);
@@ -39,8 +41,18 @@ public class EntradaUnionAGrupo extends Entrada
 
         cadenaADevolver += getMomentoPublicacion().until(LocalDateTime.now(), ChronoUnit.SECONDS);
           
+       
         return cadenaADevolver;
     
+    }
+    
+       /**
+     * Metodo que imprime or pantalla nuestro objeto actual
+     */
+    public void mostrar()
+    {
+        System.out.println(this);
+        
     }
 
 }

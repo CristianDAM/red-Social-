@@ -15,14 +15,18 @@ public class ClaseConComentario extends Entrada
     public ClaseConComentario(String autor)
     {
         super(autor);
-        
-         comentarios = new ArrayList<>();
+        comentarios = new ArrayList<>();
        
     }
     
+    /**
+     * Metodo que devuelve los comentarios
+     */
        public ArrayList<String> getComentarios()
     {
+        
         return comentarios;
+        
     }
     
       /**

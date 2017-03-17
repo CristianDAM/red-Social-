@@ -61,13 +61,18 @@ public class Entrada
 
     }
 
- 
-
-  
-
     public String toString()
     {
         return "";
+    }
+    
+       /**
+     * Metodo que imprime or pantalla nuestro objeto actual
+     */
+    public void mostrar()
+    {
+      
+        
     }
 
 }

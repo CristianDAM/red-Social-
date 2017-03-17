@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.ArrayList; 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
@@ -43,8 +43,6 @@ public class EntradaFoto extends ClaseConComentario
 
     }
 
-
-   
     public String toString()
     {
         String cadenaADevolver = "";
@@ -80,6 +78,9 @@ public class EntradaFoto extends ClaseConComentario
           return cadenaADevolver;
     }
     
+       /**
+     * Metodo que imprime or pantalla nuestro objeto actual
+     */
     public void mostrar()
     {
         System.out.println(this);

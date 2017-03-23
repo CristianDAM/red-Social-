@@ -45,14 +45,13 @@ public class EntradaFoto extends EntradaConComentario
     @Override 
     public String toString()
     {
-     
+
         String cadenaADevolver = "";
         cadenaADevolver +=    super.toString();
 
         cadenaADevolver += tituloImagen + "\n";
         cadenaADevolver += urlImagen + "\n";
 
-     
         return cadenaADevolver;
     }
 
@@ -64,13 +63,25 @@ public class EntradaFoto extends EntradaConComentario
         System.out.println(this);
 
     }
-    
-      /**
+
+    /**
      * Metodo que devuelve la cantidad de datos de una entrada
      */
     public int getCantidadDeDatosAsociadosALaEntrada()
     {
         return 6;
+    }
+
+    /**
+     * Metodo que muestra por pantalla los datos exclusivos de la entrada
+     */
+    public void mostrarDatosExclusivos() 
+    {
+        String cadenaDatosExclusivos = "";
+        cadenaDatosExclusivos += tituloImagen + "\n";
+        cadenaDatosExclusivos += urlImagen + "\n";
+
+        System.out.println( cadenaDatosExclusivos);
     }
 
 }

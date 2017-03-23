@@ -52,12 +52,23 @@ public class  EntradaTexto  extends EntradaConComentario
         System.out.println(this);
 
     }
-    
+
     /**
      * Metodo que devuelve la cantidad de datos de una entrada
      */
     public int getCantidadDeDatosAsociadosALaEntrada()
     {
-           return 5;
+        return 5;
+    }
+
+    /**
+     * Metodo que muestra por pantalla los datos exclusivos de la entrada
+     */
+    public void mostrarDatosExclusivos()
+    {
+        String cadenaDatosExclusivos = "";
+        cadenaDatosExclusivos += mensaje + "\n";
+
+        System.out.println(cadenaDatosExclusivos);
     }
 }

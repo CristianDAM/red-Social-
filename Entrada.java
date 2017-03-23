@@ -1,5 +1,6 @@
 
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 /**
  * Write a description of class Entrada here.
  * 
@@ -11,7 +12,6 @@ public class Entrada
     private String usuario;
     private int cantidadMeGusta;
     private LocalDateTime momentoPublicacion;
- 
 
     /**
      * Constructor for objects of class Entrada
@@ -20,7 +20,6 @@ public class Entrada
     {
         usuario = autor;
         cantidadMeGusta = 0;
-      
         momentoPublicacion = LocalDateTime.now();
 
     }
@@ -40,12 +39,13 @@ public class Entrada
      */
     public LocalDateTime getMomentoPublicacion()
     {
+
         return momentoPublicacion;
 
     }
 
     /**
-     * Metodo que devuelve la cantidad de me gustas
+     * Metodo que aumenta la cantidad de me gustas
      */
     public void meGusta()
     {
@@ -57,22 +57,44 @@ public class Entrada
      */
     public int getCantidadMeGusta()
     {
+
         return cantidadMeGusta;
 
     }
 
     public String toString()
     {
-        return "";
+        String cadenaADevolver = "";
+        cadenaADevolver += "Usuario: " +  getUsuario() + "\n";
+        cadenaADevolver += getCantidadMeGusta() + "me gusta\n";
+
+        long segundosQueHanPasadoDesdeLaCreacion = getMomentoPublicacion().until(LocalDateTime.now(), ChronoUnit.SECONDS);
+        long minutosQueHanPasadoDesdeLaCreacion = segundosQueHanPasadoDesdeLaCreacion / 60;
+        long segundosResiduales = segundosQueHanPasadoDesdeLaCreacion % 60;
+
+        cadenaADevolver += "Hace ";
+        if(segundosQueHanPasadoDesdeLaCreacion > 0) 
+        {
+            cadenaADevolver += minutosQueHanPasadoDesdeLaCreacion + "minutos ";
+        }
+        cadenaADevolver += segundosResiduales + " segundos.\n";
+
+        return cadenaADevolver; 
     }
-    
-       /**
+
+    /**
      * Metodo que imprime or pantalla nuestro objeto actual
      */
     public void mostrar()
     {
-      
-        
-    }
 
+    }
+    
+       /**
+     * Metodo que devuelve la cantidad de datos de una entrada
+     */
+    public int getCantidadDeDatosAsociadosALaEntrada()
+    {
+        return 0;   
+    }
 }

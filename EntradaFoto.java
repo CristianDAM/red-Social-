@@ -8,11 +8,10 @@ import java.time.temporal.ChronoUnit;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class EntradaFoto extends ClaseConComentario
+public class EntradaFoto extends EntradaConComentario
 {
-   
+
     private String tituloImagen;
-   
     private String urlImagen;
 
     /**
@@ -20,12 +19,12 @@ public class EntradaFoto extends ClaseConComentario
      */
     public EntradaFoto(String autor, String url, String titulo)
     {
-       super(autor);
+        super(autor);
         urlImagen = url;        
         tituloImagen = titulo;    
     }
 
-     /**
+    /**
      * Metodo que devuelve por pantalla el mensaje 
      */
     public String getUrlImagen()
@@ -33,58 +32,45 @@ public class EntradaFoto extends ClaseConComentario
         return urlImagen;
 
     }
-    
+
     /**
      * Metodo que devuelve el titulo de la imagen 
      */
-     public String getTituloImagen()
+    public String getTituloImagen()
     {
         return tituloImagen;
 
     }
 
+    @Override 
     public String toString()
     {
+     
         String cadenaADevolver = "";
-        cadenaADevolver += "Usuario: " +  getUsuario() + "\n";
+        cadenaADevolver +=    super.toString();
+
         cadenaADevolver += tituloImagen + "\n";
         cadenaADevolver += urlImagen + "\n";
-        cadenaADevolver += getCantidadMeGusta() + "me gusta";
 
-        long segundosQueHanPasadoDesdeLaCreacion = getMomentoPublicacion().until(LocalDateTime.now(), ChronoUnit.SECONDS);
-        long minutosQueHanPasadoDesdeLaCreacion = segundosQueHanPasadoDesdeLaCreacion / 60;
-        long segundosResiduales = segundosQueHanPasadoDesdeLaCreacion % 60;
-        
-        cadenaADevolver += "Hace ";
-        if(segundosQueHanPasadoDesdeLaCreacion > 0) 
-        {
-            cadenaADevolver += minutosQueHanPasadoDesdeLaCreacion + "minutos ";
-        }
-        cadenaADevolver += segundosResiduales + " segundos.\n";
-        
-        if (getComentarios().isEmpty())
-        {
-            cadenaADevolver += "La entrada no tiene comentarios";
-        }
-        else {
-            // Se recopilan los comentarios 
-            for (String cometario : getComentarios()) {
-                cadenaADevolver += getComentarios() + "\n";
-            }
-
-            cadenaADevolver += getMomentoPublicacion().until(LocalDateTime.now(), ChronoUnit.SECONDS);
-          
-        }
-          return cadenaADevolver;
+     
+        return cadenaADevolver;
     }
-    
-       /**
+
+    /**
      * Metodo que imprime or pantalla nuestro objeto actual
      */
     public void mostrar()
     {
         System.out.println(this);
-        
+
     }
     
+      /**
+     * Metodo que devuelve la cantidad de datos de una entrada
+     */
+    public int getCantidadDeDatosAsociadosALaEntrada()
+    {
+        return 6;
+    }
+
 }

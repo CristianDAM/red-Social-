@@ -20,39 +20,35 @@ public class EntradaUnionAGrupo extends Entrada
         this.grupo = grupo;
 
     }
-    
-    
+
+    @Override 
     public String toString()
     {
         String cadenaADevolver = "";
-        cadenaADevolver += "EL usuario: " +  getUsuario();   
-        cadenaADevolver += "se a unido a " + grupo + "\n";
-        cadenaADevolver += getCantidadMeGusta() + "me gusta";
+        cadenaADevolver += super.toString();
 
-        long segundosQueHanPasadoDesdeLaCreacion = getMomentoPublicacion().until(LocalDateTime.now(), ChronoUnit.SECONDS);
-        long minutosQueHanPasadoDesdeLaCreacion = segundosQueHanPasadoDesdeLaCreacion / 60;
-        long segundosResiduales = segundosQueHanPasadoDesdeLaCreacion % 60;
-        cadenaADevolver += "Hace ";
-        if(segundosQueHanPasadoDesdeLaCreacion > 0) 
-        {
-            cadenaADevolver += minutosQueHanPasadoDesdeLaCreacion + "minutos ";
-        }
-        cadenaADevolver += segundosResiduales + " segundos.\n";
+        cadenaADevolver += "Se ha unido al grupo " + grupo + "\n";
 
-        cadenaADevolver += getMomentoPublicacion().until(LocalDateTime.now(), ChronoUnit.SECONDS);
-          
        
         return cadenaADevolver;
-    
+
     }
-    
-       /**
+
+    /**
      * Metodo que imprime or pantalla nuestro objeto actual
      */
     public void mostrar()
     {
         System.out.println(this);
-        
+
+    }
+    
+      /**
+     * Metodo que devuelve la cantidad de datos de una entrada
+     */
+    public int getCantidadDeDatosAsociadosALaEntrada()
+    {
+        return 4;
     }
 
 }

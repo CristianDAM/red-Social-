@@ -45,12 +45,11 @@ public class EntradaFoto extends EntradaConComentario
     @Override 
     public String toString()
     {
-
         String cadenaADevolver = "";
         cadenaADevolver +=    super.toString();
 
-        cadenaADevolver += tituloImagen + "\n";
-        cadenaADevolver += urlImagen + "\n";
+        cadenaADevolver += "<p class='marco'>" + tituloImagen + "\n" + "</p>" +  "<br/>";
+        cadenaADevolver +=   "<img src=  "  + urlImagen +   " width='300' height='300' />"  + "\n"  + "<br/>" + "<hr style='color: #0056b2;' />" + "<br/>";
 
         return cadenaADevolver;
     }
@@ -60,6 +59,7 @@ public class EntradaFoto extends EntradaConComentario
      */
     public void mostrar()
     {
+        
         System.out.println(this);
 
     }
@@ -81,7 +81,7 @@ public class EntradaFoto extends EntradaConComentario
         cadenaDatosExclusivos += tituloImagen + "\n";
         cadenaDatosExclusivos += urlImagen + "\n";
 
-        System.out.println( cadenaDatosExclusivos);
+        System.out.println(cadenaDatosExclusivos);
     }
 
 }

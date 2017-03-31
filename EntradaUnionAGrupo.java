@@ -27,7 +27,7 @@ public class EntradaUnionAGrupo extends Entrada
         String cadenaADevolver = "";
         cadenaADevolver += super.toString();
 
-        cadenaADevolver += "Se ha unido al grupo " + grupo + "\n";
+        cadenaADevolver +=  "<p class='marco'>" + "Se ha unido al grupo " + grupo + "\n" + "</p>"  + "<br/>" + "<hr style='color: #0056b2;' />" + "<br/>";
 
        
         return cadenaADevolver;

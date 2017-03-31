@@ -39,7 +39,7 @@ public class  EntradaTexto  extends EntradaConComentario
 
         cadenaADevolver +=    super.toString();
 
-        cadenaADevolver += mensaje + "\n";
+        cadenaADevolver +=  "<p class='marco'>" + mensaje + "\n" + "</p>"  + "<br/>" + "<hr style='color: #0056b2;'  />" + "<br/>";
 
         return cadenaADevolver;
     }

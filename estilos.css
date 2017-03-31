@@ -1,0 +1,29 @@
+* {color:#00F; font-family: Verdana, Geneva, sans-serif; }
+
+#letra {color: #00F; font-size: 0.6em; }
+
+
+h1{text-align: center; font-size: 40pt;}
+
+h2{font-size: 16pt; font-style:italic; font-weigth:normal; color:#030303;}
+
+p {font-family: Verdana, Geneva, sans-serif;}
+ins {color:blue}
+i {color:red}
+
+* {color:blue; font-family: Verdana, Geneva, sans-serif;}
+p {font-size: 0.6em}
+i {font-size: 1.6em}
+
+p ins {color:red; font-family: Tahoma, Geneva, sans-serif;}
+p i {font-size: 1.5em; color:blue;}
+
+.marco{
+border: solid 2px black;
+width: 12cm;
+text-indent: 0px;
+margin: 0px 5px;
+padding: 10px 10px;
+background: #ffff90;
+}
+ #header { padding: 10px 10px;  background-color: #AED6F1  ; border-bottom: 1px solid silver;}

@@ -7,7 +7,7 @@ import java.time.temporal.ChronoUnit;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Entrada
+public abstract class Entrada
 {
     private String usuario;
     private int cantidadMeGusta;
@@ -65,8 +65,8 @@ public class Entrada
     public String toString()
     {
         String cadenaADevolver = "";
-        cadenaADevolver += "Usuario: " +  getUsuario() + "\n";
-        cadenaADevolver += getCantidadMeGusta() + "me gusta\n";
+        cadenaADevolver += "<h2>" + "Usuario: " +  getUsuario() + "\n" + "</h2>"+ "<br/>";
+        cadenaADevolver += "<p class='marco'>" + getCantidadMeGusta() + " " +  "me gusta\n";
 
         long segundosQueHanPasadoDesdeLaCreacion = getMomentoPublicacion().until(LocalDateTime.now(), ChronoUnit.SECONDS);
         long minutosQueHanPasadoDesdeLaCreacion = segundosQueHanPasadoDesdeLaCreacion / 60;
@@ -75,17 +75,16 @@ public class Entrada
         cadenaADevolver += "Hace ";
         if(segundosQueHanPasadoDesdeLaCreacion > 0) 
         {
-            cadenaADevolver += minutosQueHanPasadoDesdeLaCreacion + "minutos ";
+            cadenaADevolver += minutosQueHanPasadoDesdeLaCreacion + " " + "minutos ";
         }
-        cadenaADevolver += segundosResiduales + " segundos.\n";
-
+        cadenaADevolver += segundosResiduales + " segundos.\n" + "</p>"+ "<br/>";
         return cadenaADevolver; 
     }
 
     /**
      * Metodo que imprime or pantalla nuestro objeto actual
      */
-    public void mostrar()
+    public  void mostrar()
     {
 
     }
